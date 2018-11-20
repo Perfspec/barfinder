@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Drink {
@@ -18,7 +17,7 @@ public class Drink {
 	private String name;
 	@Column(length=255)
 	private String logoUrl;
-	@ManyToOne
+	
 	@JoinColumn(name="idBrewery")
 	private Integer idBrewery;
 	private double abv;

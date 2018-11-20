@@ -13,7 +13,7 @@ public class JSONConverter {
 
 	public JSONConverter(String prettyJsonString) {
 		this.parser = new JsonParser();
-		this.jsonObject = parser.parse(prettyJsonString).getAsJsonObject();
+		this.jsonObject = parser.parse(this.replace("fsa_id", "idBar",prettyJsonString)).getAsJsonObject();
 		this.gson = new GsonBuilder().setLenient().create();
 	}
 	
@@ -21,4 +21,27 @@ public class JSONConverter {
 		return gson.toJson(jsonObject);
 	}
 	
+	public String replace(String removeThis, String addThis, String input) {
+		int rtl = removeThis.length();
+		int start=0;
+		int end=rtl;
+		StringBuilder output=new StringBuilder();
+		while(end<input.length()) {
+			String tracker=input.substring(start, end);
+			if(tracker.equals(removeThis)) {
+				output.append(addThis);
+				start+=rtl;
+				end+=rtl;
+			} else {
+				output.append(input.charAt(start));
+				start++;
+				end++;
+			}
+		}
+		while(start<input.length()) {
+			output.append(input.charAt(start));
+			start++;
+		}
+		return output.toString();
+	}
 }

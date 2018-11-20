@@ -85,7 +85,8 @@ public class JSONTest {
 		JSONUtil gson = new JSONUtil();
 		Bar testBar = new Bar("Anglesey Arms", "Halnaker, Boxgrove, West Sussex", "PO18 0NQ", 490846L, 108134L, 50.865585, -0.710445, "Chichester");
 		testBar.setIdBar(240693);
-		assertEquals(firstElementFlattened, gson.toJSON(testBar));
+		JSONConverter jc = new JSONConverter(firstElementFlattened);
+		assertEquals(jc.getString(), gson.toJSON(testBar));
 		
 	}
 	

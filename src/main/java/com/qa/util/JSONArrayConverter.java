@@ -13,15 +13,13 @@ public class JSONArrayConverter {
 
 	public JSONArrayConverter(String prettyJsonString) {
 		this.parser = new JsonParser();
-		this.jsonArray = parser.parse(prettyJsonString).getAsJsonArray();
+		this.jsonArray = parser.parse(this.replace("fsa_id", "idBar", prettyJsonString)).getAsJsonArray();
 		this.gson = new GsonBuilder().setLenient().create();
 	}
 	
 	public String getArrayString() {
 		return gson.toJson(jsonArray);
 	}
-	
-	
 	
 	public String getString(int i) {
 		return gson.toJson(jsonArray.get(i));		
@@ -30,4 +28,29 @@ public class JSONArrayConverter {
 	public int size() {
 		return jsonArray.size();
 	}
+	
+	public String replace(String removeThis, String addThis, String input) {
+		int rtl = removeThis.length();
+		int start=0;
+		int end=rtl;
+		StringBuilder output=new StringBuilder();
+		while(end<input.length()) {
+			String tracker=input.substring(start, end);
+			if(tracker.equals(removeThis)) {
+				output.append(addThis);
+				start+=rtl;
+				end+=rtl;
+			} else {
+				output.append(input.charAt(start));
+				start++;
+				end++;
+			}
+		}
+		while(start<input.length()) {
+			output.append(input.charAt(start));
+			start++;
+		}
+		return output.toString();
+	}
+	
 }

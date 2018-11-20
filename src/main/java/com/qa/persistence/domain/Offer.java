@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Offer {
@@ -14,13 +13,13 @@ public class Offer {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idOffer;
 	private double price;
-	@ManyToOne
-	@JoinColumn(name="fsa_id")
+	
+	@JoinColumn(name="idBar")
 	private Integer idBar;
-	@ManyToOne
+	
 	@JoinColumn(name="idDrink")
 	private Long idDrink;
-	@ManyToOne
+	
 	@JoinColumn(name="idBrewery")
 	private Integer idBrewery;
 	
