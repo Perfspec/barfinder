@@ -38,17 +38,17 @@ public class DrinkDBRepo implements DrinkRepository {
 		return em.find(Drink.class, id);
 	}
 
-
+	@Transactional(REQUIRED)
 	public String delete(Long id) {
 		if(em.find(Drink.class, id) != null) {
-			em.remove(id);
+			em.remove(em.find(Drink.class, id));
 			return "{\"message\": \"Drink sucessfully deleted\"}";
 		} else {
 			return "{\"message\": \"Drink not deleted\"}";
 		}
 	}
 
-
+	@Transactional(REQUIRED)
 	public String create(String drink) {
 		Drink m = util.fromJSON(drink, Drink.class);
 		em.persist(m);		

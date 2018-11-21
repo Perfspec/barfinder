@@ -11,7 +11,8 @@ public class Brewery {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idBrewery;
+	@Column(name="idBrewery")
+	private Long idBrewery;
 	@Column(length=255)
 	private String name;
 	@Column(length=255)
@@ -33,11 +34,11 @@ public class Brewery {
 		this.logoUrl = logoUrl;
 	}
 
-	public Integer getIdBrewery() {
+	public Long getIdBrewery() {
 		return idBrewery;
 	}
 
-	public void setIdBrewery(Integer idBrewery) {
+	public void setIdBrewery(Long idBrewery) {
 		this.idBrewery = idBrewery;
 	}
 

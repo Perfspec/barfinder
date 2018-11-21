@@ -12,6 +12,7 @@ public class Drink {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idDrink")
 	private Long idDrink;
 	@Column(length=255)
 	private String name;
@@ -19,7 +20,7 @@ public class Drink {
 	private String logoUrl;
 	
 	@JoinColumn(name="idBrewery")
-	private Integer idBrewery;
+	private Long idBrewery;
 	private double abv;
 	
 	@Override
@@ -35,7 +36,7 @@ public class Drink {
 	
 	public Drink() {}
 
-	public Drink(String name, String logoUrl, Integer idBrewery, double abv) {
+	public Drink(String name, String logoUrl, Long idBrewery, double abv) {
 		this.name = name;
 		this.logoUrl = logoUrl;
 		this.idBrewery = idBrewery;
@@ -74,11 +75,11 @@ public class Drink {
 		this.logoUrl = logoUrl;
 	}
 
-	public Integer getIdBrewery() {
+	public Long getIdBrewery() {
 		return idBrewery;
 	}
 
-	public void setIdBrewery(Integer idBrewery) {
+	public void setIdBrewery(Long idBrewery) {
 		this.idBrewery = idBrewery;
 	}
 	

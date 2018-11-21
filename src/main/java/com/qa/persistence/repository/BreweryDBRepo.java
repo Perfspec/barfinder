@@ -33,14 +33,14 @@ public class BreweryDBRepo implements BreweryRepository {
 		return util.toJSON(brews);
 	}
 
-	public Brewery find(Integer id) {
+	public Brewery find(Long id) {
 		return em.find(Brewery.class, id);
 	}
 
 	@Transactional(REQUIRED)
-	public String delete(Integer id) {
+	public String delete(Long id) {
 		if(em.find(Brewery.class, id) != null) {
-			em.remove(id);
+			em.remove(em.find(Brewery.class, id));
 			return "{\"message\": \"Brewery sucessfully deleted\"}";
 		} else {
 			return "{\"message\": \"Brewery not deleted\"}";
@@ -55,7 +55,7 @@ public class BreweryDBRepo implements BreweryRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String update(Integer id, String brewery) {
+	public String update(Long id, String brewery) {
 		Brewery newBrewery = util.fromJSON(brewery, Brewery.class);
 		Brewery oldBrewery = em.find(Brewery.class, id);
 		

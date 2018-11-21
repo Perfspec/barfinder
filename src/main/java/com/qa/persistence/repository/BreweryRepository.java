@@ -6,12 +6,12 @@ public interface BreweryRepository {
 
 	String getAll();
 
-	Brewery find(Integer id);
+	Brewery find(Long id);
 
-	String delete(Integer id);
+	String delete(Long id);
 
 	String create(String brewery);
 
-	String update(Integer id, String brewery);
+	String update(Long id, String brewery);
 
 }

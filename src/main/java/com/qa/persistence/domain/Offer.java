@@ -1,5 +1,6 @@
 package com.qa.persistence.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,17 +12,18 @@ public class Offer {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="idOffer")
 	private Long idOffer;
 	private double price;
 	
 	@JoinColumn(name="idBar")
-	private Integer idBar;
+	private Long idBar;
 	
 	@JoinColumn(name="idDrink")
 	private Long idDrink;
 	
 	@JoinColumn(name="idBrewery")
-	private Integer idBrewery;
+	private Long idBrewery;
 	
 	@Override
 	public String toString() {
@@ -36,7 +38,7 @@ public class Offer {
 	
 	public Offer() {}
 
-	public Offer(double price, Integer idBar, Long idDrink, Integer idBrewery) {
+	public Offer(double price, Long idBar, Long idDrink, Long idBrewery) {
 		this.price = price;
 		this.idBar = idBar;
 		this.idDrink = idDrink;
@@ -59,11 +61,11 @@ public class Offer {
 		this.price = price;
 	}
 
-	public Integer getIdBar() {
+	public Long getIdBar() {
 		return idBar;
 	}
 
-	public void setIdBar(Integer idBar) {
+	public void setIdBar(Long idBar) {
 		this.idBar = idBar;
 	}
 
@@ -75,11 +77,11 @@ public class Offer {
 		this.idDrink = idDrink;
 	}
 
-	public Integer getIdBrewery() {
+	public Long getIdBrewery() {
 		return idBrewery;
 	}
 
-	public void setIdBrewery(Integer idBrewery) {
+	public void setIdBrewery(Long idBrewery) {
 		this.idBrewery = idBrewery;
 	}
 

@@ -27,14 +27,14 @@ public class BreweryEndpoint {
 	@Path("/get/{id}")
 	@GET
 	@Produces({"application/json"})
-	public String get(@PathParam("id") Integer id) {
+	public String get(@PathParam("id") Long id) {
 		return bs.find(id).toString();
 	}
 	
 	@Path("/delete/{id}")
 	@DELETE
 	@Produces({"application/json"})
-	public String delete(@PathParam("id") Integer id) {
+	public String delete(@PathParam("id") Long id) {
 		return bs.delete(id);
 	}
 
@@ -48,7 +48,7 @@ public class BreweryEndpoint {
 	@Path("/update/{id}")
 	@PUT
 	@Produces({"application/json"})
-	public String update(@PathParam("id") Integer id, String brewery) {
+	public String update(@PathParam("id") Long id, String brewery) {
 		return bs.update(id, brewery);
 	}
 	

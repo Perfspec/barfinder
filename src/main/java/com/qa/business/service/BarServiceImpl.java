@@ -14,11 +14,11 @@ public class BarServiceImpl implements IBarService {
 		return repo.getAll();
 	}
 
-	public Bar find(Integer id) {
+	public Bar find(Long id) {
 		return repo.find(id);
 	}
 
-	public String delete(Integer id) {
+	public String delete(Long id) {
 		return repo.delete(id);
 	}
 
@@ -26,7 +26,7 @@ public class BarServiceImpl implements IBarService {
 		return repo.create(bar);
 	}
 
-	public String update(Integer id, String bar) {
+	public String update(Long id, String bar) {
 		return repo.update(id, bar);
 	}
 

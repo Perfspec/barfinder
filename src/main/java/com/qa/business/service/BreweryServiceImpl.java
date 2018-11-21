@@ -14,11 +14,11 @@ public class BreweryServiceImpl implements IBreweryService {
 		return repo.getAll();
 	}
 
-	public Brewery find(Integer id) {
+	public Brewery find(Long id) {
 		return repo.find(id);
 	}
 
-	public String delete(Integer id) {
+	public String delete(Long id) {
 		return repo.delete(id);
 	}
 
@@ -26,7 +26,7 @@ public class BreweryServiceImpl implements IBreweryService {
 		return repo.create(brewery);
 	}
 
-	public String update(Integer id, String brewery) {
+	public String update(Long id, String brewery) {
 		return repo.update(id, brewery);
 	}
 

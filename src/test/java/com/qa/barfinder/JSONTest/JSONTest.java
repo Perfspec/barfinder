@@ -84,7 +84,7 @@ public class JSONTest {
 	public void FlattenTest() {
 		JSONUtil gson = new JSONUtil();
 		Bar testBar = new Bar("Anglesey Arms", "Halnaker, Boxgrove, West Sussex", "PO18 0NQ", 490846L, 108134L, 50.865585, -0.710445, "Chichester");
-		testBar.setIdBar(240693);
+		testBar.setIdBar(240693L);
 		JSONConverter jc = new JSONConverter(firstElementFlattened);
 		assertEquals(jc.getString(), gson.toJSON(testBar));
 		
@@ -94,7 +94,7 @@ public class JSONTest {
 	public void GSONTest() {
 		JSONUtil gson = new JSONUtil();
 		Bar testBar = new Bar("Anglesey Arms", "Halnaker, Boxgrove, West Sussex", "PO18 0NQ", 490846L, 108134L, 50.865585, -0.710445, "Chichester");
-		testBar.setIdBar(240693);
+		testBar.setIdBar(240693L);
 		JSONConverter jc = new JSONConverter(firstElementInJSONArray);
 		assertEquals(gson.toJSON(testBar), jc.getString());
 	}
@@ -103,7 +103,7 @@ public class JSONTest {
 	public void JSONArrayTest() {
 		JSONUtil gson = new JSONUtil();
 		Bar testBar = new Bar("Anglesey Arms", "Halnaker, Boxgrove, West Sussex", "PO18 0NQ", 490846L, 108134L, 50.865585, -0.710445, "Chichester");
-		testBar.setIdBar(240693);
+		testBar.setIdBar(240693L);
 		JSONArrayConverter jc = new JSONArrayConverter(JSONArray);
 		assertEquals(gson.toJSON(testBar), jc.getString(0));
 	}

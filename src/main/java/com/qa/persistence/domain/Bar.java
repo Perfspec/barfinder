@@ -12,7 +12,7 @@ public class Bar {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="idBar")
-	private Integer idBar;
+	private Long idBar;
 	@Column(length=255)
 	private String name;
 	@Column(length=255)
@@ -54,11 +54,11 @@ public class Bar {
 		this.local_authority = localAuthority;
 	}
 
-	public Integer getIdBar() {
+	public Long getIdBar() {
 		return idBar;
 	}
 
-	public void setIdBar(Integer idBar) {
+	public void setIdBar(Long idBar) {
 		this.idBar = idBar;
 	}
 

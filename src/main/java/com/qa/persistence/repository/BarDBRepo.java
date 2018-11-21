@@ -33,14 +33,14 @@ public class BarDBRepo implements BarRepository {
 		return util.toJSON(bars);
 	}
 
-	public Bar find(Integer id) {
+	public Bar find(Long id) {
 		return em.find(Bar.class, id);
 	}
 
 	@Transactional(REQUIRED)
-	public String delete(Integer id) {
+	public String delete(Long id) {
 		if(em.find(Bar.class, id) != null) {
-			em.remove(id);
+			em.remove(em.find(Bar.class, id));
 			return "{\"message\": \"Bar sucessfully deleted\"}";
 		} else {
 			return "{\"message\": \"Bar not deleted\"}";
@@ -55,7 +55,7 @@ public class BarDBRepo implements BarRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String update(Integer id, String bar) {
+	public String update(Long id, String bar) {
 		Bar newBar = util.fromJSON(bar, Bar.class);
 		Bar oldBar = em.find(Bar.class, id);
 		
@@ -74,12 +74,9 @@ public class BarDBRepo implements BarRepository {
 
 	@Transactional(REQUIRED)
 	public String createX(String bars) {
-		
-		Bar m;
 		JSONArrayConverter jc = new JSONArrayConverter(bars);
 		for(int i=0; i<jc.size(); i++) {
-			m = util.fromJSON(jc.getString(i), Bar.class);
-			em.persist(m);
+			em.persist(util.fromJSON(jc.getString(i), Bar.class));
 		}
 		return "{\"message\": \"Bars successfully added\"}";
 	}

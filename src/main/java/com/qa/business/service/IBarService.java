@@ -6,13 +6,13 @@ public interface IBarService {
 
 	String getAll();
 
-	Bar find(Integer id);
+	Bar find(Long id);
 
-	String delete(Integer id);
+	String delete(Long id);
 
 	String create(String bar);
 
-	String update(Integer id, String bar);
+	String update(Long id, String bar);
 
 	String createX(String bars);
 

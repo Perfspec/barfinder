@@ -27,14 +27,14 @@ public class BarEndpoint {
 	@Path("/get/{id}")
 	@GET
 	@Produces({"application/json"})
-	public String get(@PathParam("id") Integer id) {
+	public String get(@PathParam("id") Long id) {
 		return bs.find(id).toString();
 	}
 	
 	@Path("/delete/{id}")
 	@DELETE
 	@Produces({"application/json"})
-	public String delete(@PathParam("id") Integer id) {
+	public String delete(@PathParam("id") Long id) {
 		return bs.delete(id);
 	}
 
@@ -55,7 +55,7 @@ public class BarEndpoint {
 	@Path("/update/{id}")
 	@PUT
 	@Produces({"application/json"})
-	public String update(@PathParam("id") Integer id, String bar) {
+	public String update(@PathParam("id") Long id, String bar) {
 		return bs.update(id, bar);
 	}
 	
