@@ -3,6 +3,7 @@ package com.qa.persistence.repository;
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.enterprise.inject.Default;
@@ -35,6 +36,22 @@ public class BarDBRepo implements BarRepository {
 
 	public Bar find(Long id) {
 		return em.find(Bar.class, id);
+	}
+	
+	public Bar find(double longitude, double latitude, int rank) {
+		Query q = em.createQuery("Select a FROM Bar a");
+		@SuppressWarnings("unchecked")
+		ArrayList<Bar> bars = (ArrayList<Bar>) q.getResultList();
+		for(int i=0; i<bars.size(); i++) {
+			
+		}
+		return null;
+	}
+	
+	public double distance(double longitude, double latitude, Bar bar) {
+		double diffLong = bar.getLongitude()-longitude;
+		double diffLat = bar.getLatitude()-latitude;		
+		return Math.sqrt(diffLong*diffLong+diffLat*diffLat);
 	}
 
 	@Transactional(REQUIRED)
@@ -80,6 +97,5 @@ public class BarDBRepo implements BarRepository {
 		}
 		return "{\"message\": \"Bars successfully added\"}";
 	}
-	
 
 }

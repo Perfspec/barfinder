@@ -14,6 +14,6 @@ public interface IBarService {
 
 	String update(Long id, String bar);
 
-	String createX(String bars);
+	Bar find(double longitude, double latitude, int rank);
 
 }

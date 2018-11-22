@@ -31,6 +31,13 @@ public class BarEndpoint {
 		return bs.find(id).toString();
 	}
 	
+	@Path("/get/{longtitude}/{latitude}/{rank}")
+	@GET
+	@Produces({"application/json"})
+	public String get(@PathParam("longtitude") double longitude, @PathParam("latitude") double latitude, @PathParam("rank") int rank) {
+		return bs.find(longitude, latitude, rank).toString();
+	}
+	
 	@Path("/delete/{id}")
 	@DELETE
 	@Produces({"application/json"})
@@ -43,13 +50,6 @@ public class BarEndpoint {
 	@Produces("application/json")
 	public String create(String bar) {
 		return bs.create(bar);
-	}
-	
-	@Path("/createX")
-	@POST
-	@Produces("application/json")
-	public String createX(String bars) {
-		return bs.createX(bars);
 	}
 	
 	@Path("/update/{id}")

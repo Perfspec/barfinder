@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Perfspec/barfinder#readme",
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "express": "^4.16.4",
     "open": "0.0.5"
   }

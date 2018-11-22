@@ -16,4 +16,6 @@ public interface BarRepository {
 
 	String createX(String bars);
 
+	Bar find(double longitude, double latitude, int rank);
+
 }
