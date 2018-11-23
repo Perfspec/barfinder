@@ -14,6 +14,8 @@ public interface IBarService {
 
 	String update(Long id, String bar);
 
-	Bar find(double longitude, double latitude, int rank);
+	String getLoLa(double longitude, double latitude, int listLength);
+
+	String getEN(Long easting, Long northing, int listLength);
 
 }

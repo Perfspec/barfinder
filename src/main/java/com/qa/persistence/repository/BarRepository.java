@@ -13,9 +13,10 @@ public interface BarRepository {
 	String create(String bar);
 
 	String update(Long id, String bar);
+	
+	String getLoLa(double longitude, double latitude, int listLength);
 
-	String createX(String bars);
+	String getEN(Long easting, Long northing, int listLength);
 
-	Bar find(double longitude, double latitude, int rank);
 
 }

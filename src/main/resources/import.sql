@@ -1,6 +1,3 @@
-INSERT INTO Brewery(name,logoUrl) VALUES('Harveys','https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg');
-INSERT INTO Drink(name,logoUrl,idBrewery,abv) VALUES('Sussex Best Bitter', 'https://d1dh7zebtp17c7.cloudfront.net/20151026093216/Polypin-Best-Bitter-2016.jpg',1,4.0);
-
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Anglesey Arms','Halnaker, Boxgrove, West Sussex','PO18 0NQ',490846,108134,50.865585,-0.710445,'Chichester');
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Badgers Tavern','Station Road, Petworth, West Sussex','GU28 0JF',497048,119162,50.963717,-0.619411,'Chichester');
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Barley Mow','Breakneck Lane, Walderton, Chichester, West Sussex','PO18 9ED',479004,110627,50.889736,-0.878145,'Chichester');
@@ -95,149 +92,72 @@ INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Earl Of March','Lavant, West Sussex','PO18 0BQ',485740,108283,50.867703,-0.782962,'Chichester');
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Eastgate PH','4 The Hornet, Chichester, West Sussex','PO19 7JG',486561,104787,50.836151,-0.772124,'Chichester');
 INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Elsted Inn','Fitzhall Road, Elsted, Midhurst, West Sussex','GU29 0JT',483266,120606,50.978853,-0.815287,'Chichester')
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
-INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES(
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Fishermans Joy','71 East Street, Selsey, Chichester, West Sussex','PO20 0BU',485911,93032,50.730564,-0.784082,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Foundry','1 Southgate, Chichester, West Sussex','PO19 8DH',485913,104363,50.832444,-0.781423,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Four Chesnuts','234 Oving Road, Chichester, West Sussex','PO19 7EJ',487146,104859,50.836710,-0.763787,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Fox Goes Free','East Dean Lane, Charlton, Singleton, Chichester','PO18 0HU',488778,112956,50.909257,-0.738654,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Friendship Centre (Petworth And District Over 60's Club)','Trumps Alley, East Street, Petworth, West Sussex','GU28 0AB',497742,121751,50.986874,-0.608836,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The George And Dragon','51 North Street, Chichester, West Sussex','PO19 1NQ',486121,105172,50.839677,-0.778266,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The George Inn','Eartham, Chichester, West Sussex','PO18 0LT',493922,109553,50.877851,-0.666383,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Goodwood Hotel','Goodwood, Chichester, West Sussex','PO18 0QB',489246,108185,50.866301,-0.733162,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Greyhound Inn','Cocking Causeway, Cocking, Midhurst, West Sussex','GU29 9QH',488227,119652,50.969539,-0.744883,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Gribble Inn','Gribble Lane, Oving, Chichester, West Sussex','PO20 2BP',489947,105067,50.838152,-0.723969,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Half Moon','Half Moon Inn, Glasshouse Lane, Kirdford, Billingshurst','RH14 0LT',501759,126558,51.029392,-0.550279,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Hole In The Wall','St Martins Street, Chichester, West Sussex','PO19 1NP',486145,104854,50.836815,-0.778000,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Hollist Arms','The Street, Lodsworth, Petworth, West Sussex','GU28 9BZ',492751,123162,51.000384,-0.679563,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Hornet Alehouse','23 The Hornet, Chichester, West Sussex','PO19 7JL',486548,104809,50.836350,-0.772288,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Jolly Drover','London Road, Hill Brow, Liss, Hampshire','GU33 7QL',478848,126283,51.030514,-0.876975,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Kings Arms','Midhurst Road, Fernhurst, Haslemere, West Sussex','GU27 3HA',489489,126860,51.034145,-0.725126,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Lamb Inn','Chichester Road, West Wittering, Chichester, West Sussex','PO20 8QA',480576,99166,50.786468,-0.858331,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Last Drop','Grove Lane, Petworth, West Sussex','GU28 0HY',498013,120715,50.977506,-0.605256,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Lickfold Inn','Surrey Road, Lickfold, Lurgashall, Petworth','GU28 9EY',492592,126344,51.029015,-0.681017,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Midhurst Club','North Street, Midhurst, West Sussex','GU29 9DR',488635,121756,50.988392,-0.738548,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Mill','Shottermill Road, Hammer, Linchmere, Haslemere','GU27 3QE',488298,132486,51.084906,-0.740736,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Nags Head','3 St Pancras, Chichester, West Sussex','PO19 7SJ',486507,104861,50.836833,-0.772859,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Neptune Inn','120 High Street, Selsey, Chichester, West Sussex','PO20 0QE',485296,93197,50.732137,-0.792755,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Ocean Bar','The Waterfront Complex, West Sands Caravan Park, Mill Lane, Selsey','PO20 9BH',484339,93462,50.734660,-0.806252,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Old Cross','65 North Street, Chichester, West Sussex','PO19 1LP',486112,104993,50.838070,-0.778450,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Old House At Home','Cakeham Road, West Wittering, Chichester, West Sussex','PO20 8AD',477943,98360,50.779589,-0.895831,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Park Tavern','11 Priory Road, Chichester, West Sussex','PO19 1NS',486211,105037,50.838450,-0.777020,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Red Lion','The Green, Fernhurst, Haslemere, West Sussex','GU27 3HY',490014,128553,51.049283,-0.717221,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Richmond','9 Stockbridge Road, Chichester, West Sussex','PO19 8DT',485842,104153,50.830558,-0.782466,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Royal British Legion','Grove Street, Petworth, West Sussex','GU28 0BD',497930,121421,50.983867,-0.606248,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Royal Oak','Pook Lane, Lavant, Chichester, West Sussex','PO18 0AX',486330,108481,50.869387,-0.774520,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Ship Inn','The Street, Itchenor, Chichester, West Sussex','PO20 7AH',479978,101323,50.805953,-0.866343,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Shore Inn','Shore Road, East Wittering, Chichester, West Sussex','PO20 8DZ',479451,97126,50.768290,-0.874712,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Sir Roger Tichborne','Loxwood Road, Alfold Bars, Loxwood, Billingshurst','RH14 0QS',503708,133371,51.090277,-0.520560,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Spotted Cow','Selsey Road, Hunston, Chichester, West Sussex','PO20 1PD',486256,101986,50.811014,-0.777112,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Squire And Horse Inn','Bury Common, Bury, Pulborough, West Sussex','RH20 1NS',500801,112988,50.907572,-0.567692,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Star','Market Square, Petworth, West Sussex','GU28 0AH',497651,121679,50.986243,-0.610152,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Stonemasons Inn','North Street, Petworth, West Sussex','GU28 9NL',497679,122466,50.993313,-0.609542,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Sussex Brewery','36 Main Road, Southbourne, Emsworth, Hampshire','PO10 8AU',475461,105740,50.846271,-0.929513,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Swan Inn','Lower Street, Fittleworth, Pulborough, West Sussex','RH20 1EL',501053,118620,50.958158,-0.562563,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Swan Inn','Red Lion Street, Midhurst, West Sussex','GU29 9PB',488671,121460,50.985716,-0.738107,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Sylvia Beaufoy Youth Centre','Midhurst Road, Petworth, West Sussex','GU28 0ET',497562,121439,50.984100,-0.611484,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Three Crowns','Billingshurst Road, Wisborough Green, Billingshurst, West Sussex','RH14 0DX',505052,125922,51.023082,-0.503521,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Three Moles','Selham Road, Selham, Lodsworth, Petworth','GU28 0PN',493496,120677,50.977915,-0.669588,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Unicorn Inn','Heyshott Street, Heyshott, Midhurst, West Sussex','GU29 0DL',489869,118003,50.954470,-0.721911,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Welldiggers Arms','Low Heath, Petworth, West Sussex','GU28 0HG',499390,120977,50.979626,-0.585577,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Woolpack','71 Fishbourne Road West, Fishbourne, Chichester, West Sussex','PO19 3JJ',483892,104664,50.835437,-0.810031,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Three Horseshoes','Station Road, Elsted, Midhurst, West Sussex','GU29 0JY',481626,119651,50.970502,-0.838857,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Tillington Village Hall Management Committee','Tillington Village Hall, Tillington, Petworth, West Sussex','GU28 9AF',496270,122056,50.989855,-0.629721,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Victoria Inn','West Marden, West Sussex','PO18 9EN',477234,113592,50.916641,-0.902678,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Viking Bar','The Viking, Green Lawns Caravan Park, Chichester Road, Selsey','PO20 0ND',485319,93883,50.738302,-0.792271,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Viking Food','Viking Music And Dance Club, Green Lawns Caravan Park, Chichester Road, Selsey','PO20 0ND',485319,93883,50.738302,-0.792271,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Walnut Tree Inn','Vinnetrow Road, Runcton, Chichester, West Sussex','PO20 1QB',488083,102635,50.816574,-0.751017,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('West Wittering And District','Royal British Legion Club, Legion Way, East Wittering, Chichester','PO20 8PA',480379,96707,50.764387,-0.861647,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Westbourne Social Club','River Street, Westbourne, Emsworth, West Sussex','PO10 8TG',475801,107845,50.865152,-0.924250,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Wheatsheaf Inn','Wool Lane, Midhurst, West Sussex','GU29 9BX',488602,121474,50.985862,-0.739086,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('White Horse','The Square, Westbourne, Emsworth, West Sussex','PO10 8UE',475681,107431,50.861436,-0.926040,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('White Horse Club & Sports Bar','JB Complex, White Horse Caravan Park, Paddock Lane, Selsey','PO20 9EJ',485319,93883,50.738302,-0.792271,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('White Horse Inn','East Street, Rogate, Petersfield, West Sussex','GU31 5EA',480826,123777,51.007709,-0.849332,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('White Swan','Station Road, Bosham, Chichester, West Sussex','PO18 8NG',481225,105350,50.841985,-0.847745,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Wickham Arms','102 Bognor Road, Chichester, West Sussex','PO19 7TW',487325,104471,50.833204,-0.761352,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Yeee Ha!','2 Knock Hundred House, Knockhundred Row, Midhurst, West Sussex','GU29 9DQ',488668,121593,50.986921,-0.738132,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('Zee Bar','Student Union Building, Bishop Otter Campus, College Lane, Chichester','PO19 6PE',486382,105688,50.844278,-0.774439,'Chichester');
+INSERT INTO Bar(name,address,postcode,easting,northing,latitude,longitude,local_authority) VALUES('The Flying Bull','The Flying Bull Inn, London Road, Rake, Liss, GU33 7JB','GU33 7JB',480382,127807,51.044003,-0.854781,'Chichester');
 
+INSERT INTO Brewery(name,logoUrl) VALUES('Harveys','https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg');
+INSERT INTO Drink(name,logoUrl,idBrewery,abv) VALUES('Sussex Best Bitter', 'https://d1dh7zebtp17c7.cloudfront.net/20151026093216/Polypin-Best-Bitter-2016.jpg',1,4.0);
 
 INSERT INTO Offer(idBar,idBrewery,idDrink,price) VALUES(1,1,1,2.5);

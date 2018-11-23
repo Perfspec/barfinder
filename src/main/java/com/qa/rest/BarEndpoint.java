@@ -31,11 +31,18 @@ public class BarEndpoint {
 		return bs.find(id).toString();
 	}
 	
-	@Path("/get/{longtitude}/{latitude}/{rank}")
+	@Path("/get/longitude={longtitude}/latitude={latitude}/listLength={listLength}")
 	@GET
 	@Produces({"application/json"})
-	public String get(@PathParam("longtitude") double longitude, @PathParam("latitude") double latitude, @PathParam("rank") int rank) {
-		return bs.find(longitude, latitude, rank).toString();
+	public String get(@PathParam("longtitude") double longitude, @PathParam("latitude") double latitude, @PathParam("listLength") int listLength) {
+		return bs.getLoLa(longitude, latitude, listLength);
+	}
+	
+	@Path("/get/easting={easting}/northing={northing}/listLength={listLength}")
+	@GET
+	@Produces({"application/json"})
+	public String get(@PathParam("easting") Long easting, @PathParam("northing") Long northing, @PathParam("listLength") int listLength) {
+		return bs.getEN(easting, northing, listLength);
 	}
 	
 	@Path("/delete/{id}")
