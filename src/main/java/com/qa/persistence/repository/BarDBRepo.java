@@ -4,6 +4,8 @@ import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -13,7 +15,6 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import com.qa.persistence.domain.Bar;
-import com.qa.util.JSONArrayConverter;
 import com.qa.util.JSONUtil;
 
 @Transactional(SUPPORTS)
@@ -72,14 +73,34 @@ public class BarDBRepo implements BarRepository {
 		return "{\"message\": \"Bar sucessfully updated\"}";
 	}
 
-	@Transactional(REQUIRED)
-	public String createX(String bars) {
-		JSONArrayConverter jc = new JSONArrayConverter(bars);
-		for(int i=0; i<jc.size(); i++) {
-			em.persist(util.fromJSON(jc.getString(i), Bar.class));
-		}
-		return "{\"message\": \"Bars successfully added\"}";
+	public String getLoLa(double longitude, double latitude, int listLength) {
+		Query q = em.createQuery("Select a FROM Bar a");
+		@SuppressWarnings("unchecked")
+		List<Bar> bars = q.getResultList();
+		bars.sort(Comparator.comparing(bar -> distance(longitude, latitude, bar)));
+		Collection<Bar> output = (Collection<Bar>) bars.subList(0, listLength);
+		return util.toJSON(output);
+	}
+
+	public String getEN(Long easting, Long northing, int listLength) {
+		Query q = em.createQuery("Select a FROM Bar a");
+		@SuppressWarnings("unchecked")
+		List<Bar> bars = q.getResultList();
+		bars.sort(Comparator.comparing(bar -> distance(easting, northing, bar)));
+		Collection<Bar> output = (Collection<Bar>) bars.subList(0, listLength);
+		return util.toJSON(output);
 	}
 	
-
+	public double distance(double longitude, double latitude, Bar bar) {
+		double diffLong = bar.getLongitude()-longitude;
+		double diffLat = bar.getLatitude()-latitude;		
+		return Math.sqrt(diffLong*diffLong+diffLat*diffLat);
+	}
+	
+	public Long distance(Long easting, Long northing, Bar bar) {
+		long diffE = bar.getEasting()-easting;
+		long diffN = bar.getNorthing()-northing;
+		return Math.abs(diffE)+Math.abs(diffN);
+	}
+	
 }

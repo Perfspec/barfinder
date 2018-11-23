@@ -30,8 +30,14 @@ public class BarServiceImpl implements IBarService {
 		return repo.update(id, bar);
 	}
 
-	public String createX(String bars) {
-		return repo.createX(bars);
+
+	public String getLoLa(double longitude, double latitude, int listLength) {
+		return repo.getLoLa(longitude,latitude,listLength);
+	}
+	
+
+	public String getEN(Long easting, Long northing, int listLength) {
+		return repo.getEN(easting,northing,listLength);
 	}
 
 }
