@@ -11,5 +11,10 @@ pipeline {
                 sh "cp /var/lib/jenkins/workspace/multibranch_branch-front-end/target/barfinder-0.0.1-SNAPSHOT.war /home/lewisrwebb/wildfly/standalone/deployments"
             }
         }
+	stage('install new modules') {
+		sh "cd /var/lib/jenkins/workspace/multibranch_branch-front-end/front-end/"
+		sh "sudo npm install"
+		sh "npm start"
+	}		
     }
 }
