@@ -1,4 +1,4 @@
-const IP_ADDRESS = 'http://localhost';
+const IP_ADDRESS = 'http://35.189.69.132';
 const API_PORT = ':8080/';
 const API_REST = 'barfinder-0.0.1-SNAPSHOT/rest/';
 

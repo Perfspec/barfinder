@@ -7,12 +7,12 @@ class BreweryPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      entity: {
-      id:'1',
-      name:'BrewDog',
-      logoUrl:'https://images.universe.com/fc1565a7-cd4e-46d4-82fd-d46d9db07592/-/inline/yes/'
+      entity : {
+        id:'1',
+        name:'BrewDog',
+        logoUrl:'https://images.universe.com/fc1565a7-cd4e-46d4-82fd-d46d9db07592/-/inline/yes/'
       },
-      whichGet: 'all',
+      whichGet : 'all',
       options : {
         defaultSortName: 'id',
         defaultSortOrder : 'desc'
