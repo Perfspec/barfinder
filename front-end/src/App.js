@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import TableOffers from './TableOffers';
-import './App.css';
+import PageSelector from './PageSelector';
+
+
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      selector: 'Brewery'
+    }
+  }
   render() {
     return (
-      <div className="App">
+      <div>
+        <button id='BarSelector' onClick={() => this.setState({selector: 'Bar'})}>Bar</button>
+        <button id='BrewerySelector' onClick={() => this.setState({selector: 'Brewery'})}>Brewery</button>
 
-      <TableOffers />
-
-
+        <PageSelector selector={this.state.selector} />
       </div>
     );
   }
