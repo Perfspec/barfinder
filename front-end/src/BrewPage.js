@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BootstrapTable} from 'react-bootstrap-table-next';
-import {get} from './BrewFuncs.js';
+import {all} from './BrewFuncs.js';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 const columns = [{
@@ -16,20 +16,10 @@ const columns = [{
   dataField: 'button',
 }];
 
-const data=[{
-  "idBrewery":1,
-  "name":"Harveys",
-  "logoUrl":"https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg"
-},{
-  "idBrewery":2,
-  "name":"Harveys",
-  "logoUrl":"https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg"
-}];
-
 class BrewPage extends Component {
 
     render() {
-      return <BootstrapTable id='BrewPage' keyField='id' data={ data } columns={ columns } />;
+      return <BootstrapTable id='BrewPage' keyField='id' data={ all() } columns={ columns } class='responsive' />;
     }
 }
 

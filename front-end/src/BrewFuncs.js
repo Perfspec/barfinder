@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import {BREWERY, ADD, GET, ALL, UPD, DEL, ORIGIN} from './const.js';
+import {BREWERY, ADD, GET, ALL, UPD, DEL} from './const.js';
 
 export const add = (event) => {
     event.preventDefault();
@@ -12,16 +12,13 @@ export const add = (event) => {
     window.location.reload();
 }
 
+
 export function get(id) {
-  Axios.get(BREWERY+GET+id,{
-    headers:{'Access-Control-Allow-Origin': ORIGIN}
-  }).then(response => { return response.data;});
+  Axios.get(BREWERY+GET+id).then(response => { return response.data;});
 }
 
 export const all = () => {
-  Axios.get(BREWERY+ALL,{
-    headers:{'Access-Control-Allow-Origin': ORIGIN}
-  }).then(response => {return response.data;});
+  Axios.get(BREWERY+ALL).then(response => {return response.data;});
 }
 
 export function del(event){
