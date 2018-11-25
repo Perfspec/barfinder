@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PageSelector from './PageSelector';
+import PageSelector from 'PageSelector';
 
 
 
