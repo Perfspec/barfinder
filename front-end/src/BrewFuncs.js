@@ -7,7 +7,7 @@ export const Add = (event) => {
       name : document.getElementById('Add Name').value,
       logoUrl: document.getElementById('Add Logo').value
     }).then(response => {
-        document.getElementById('Confirm').innerHTML = response.data.message;
+        document.getElementById('Confirm').innerHTML = response.message;
     })
     window.location.reload();
 }
@@ -24,7 +24,7 @@ export const All = () => {
 export function Del(event){
     event.preventDefault();
     Axios.delete(BREWERY+DEL+document.getElementById('Del Id').value).then(response => {
-        document.getElementById('Confirm').innerHTML = response.data.message;
+        document.getElementById('Confirm').innerHTML = response.message;
     })
     window.location.reload();
 }
@@ -35,7 +35,7 @@ export function Upd(event){
       name : document.getElementById('Upd Name').value,
       logoUrl: document.getElementById('Upd Logo').value
     }).then(response => {
-        document.getElementById('Confirm').innerHTML = response.data.message;
+        document.getElementById('Confirm').innerHTML = response.message;
     })
     window.location.reload();
 }
