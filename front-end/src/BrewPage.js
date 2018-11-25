@@ -16,10 +16,20 @@ const columns = [{
   dataField: 'button',
 }];
 
+const data=[{
+  "idBrewery":1,
+  "name":"Harveys",
+  "logoUrl":"https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg"
+},{
+  "idBrewery":2,
+  "name":"Harveys",
+  "logoUrl":"https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg"
+}];
+
 class BrewPage extends Component {
 
     render() {
-      return <BootstrapTable id='BrewPage' keyField='id' data={ get('1') } columns={ columns } />;
+      return <BootstrapTable id='BrewPage' keyField='id' data={ data } columns={ columns } />;
     }
 }
 
