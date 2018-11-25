@@ -3,7 +3,7 @@ import {BootstrapTable} from 'react-bootstrap-table-next';
 import {all, del} from './BrewFuncs.js';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-export default class BrewPage extends Component {
+class BrewPage extends Component {
 
     constructor(props){
         super(props);
@@ -59,3 +59,5 @@ export default class BrewPage extends Component {
         );
     }
 }
+
+export default BrewPage;
