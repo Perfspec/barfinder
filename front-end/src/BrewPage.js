@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table-next';
-
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 const getAll = [{
@@ -21,7 +20,11 @@ class BrewPage extends Component {
 
     render() {
       return (
-        <div></div>
+        <BootstrapTable data={ getAll } cellEdit={ cellEditProp }>
+          <TableHeaderColumn dataField='idBrewery' isKey>id</TableHeaderColumn>
+          <TableHeaderColumn dataField='name'>name</TableHeaderColumn>
+          <TableHeaderColumn dataField='logoUrl'>logoUrl</TableHeaderColumn>
+        </BootstrapTable>
             );
     }
 }
