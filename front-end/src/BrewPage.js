@@ -1,27 +1,22 @@
 import React, {Component} from 'react';
-import {BootstrapTable} from 'react-bootstrap-table-next';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table-next';
 import {All} from './BrewFuncs.js';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-const columns = [{
-  dataField: 'idBrewery',
-  text: 'Brewery ID'
-}, {
-  dataField: 'name',
-  text: 'Brewery Name'
-}, {
-  dataField: 'logoUrl',
-  text: 'Brewery Price'
-},{
-  dataField: 'button',
-}];
-
 const getAll = All();
+
+const cellEditProp = {
+  mode: 'click'
+};
 
 class BrewPage extends Component {
 
     render() {
-      return <BootstrapTable id='BrewPage' keyField='id' data={ getAll } columns={ columns } class='responsive' />;
+      return <BootstrapTable data={ getAll } cellEdit={ cellEditProp }>
+          <TableHeaderColumn dataField='idBrewery' isKey>id</TableHeaderColumn>
+          <TableHeaderColumn dataField='name'>name</TableHeaderColumn>
+          <TableHeaderColumn dataField='logoUrl'>logoUrl</TableHeaderColumn>
+      </BootstrapTable>
     }
 }
 
