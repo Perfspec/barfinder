@@ -17,6 +17,6 @@ pipeline {
                                 sh "cd /var/lib/jenkins/workspace/multibranch_branch-front-end/front-end/"
 				sh "npm install"
 			}
-		}		
+		}
     	}
 }
