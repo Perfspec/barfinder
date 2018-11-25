@@ -7,6 +7,7 @@ export default class BrewPage extends Component {
     constructor(props){
         super(props);
         this.state={
+            data: [],
             options :{
             defaultSortName: 'id',
             defaultSortOrder : 'desc'
@@ -15,7 +16,7 @@ export default class BrewPage extends Component {
     }
 
     populateTable = () => {
-      var data = all;
+      var data = all();
       this.setState({
         data: data
       });

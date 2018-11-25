@@ -18,7 +18,7 @@ export function get(id) {
 
 export const all = (event) => {
   event.preventDefault();
-  Axios.get(BREWERY+ALL).then(response => { this.setState({entity: response.data})});
+  Axios.get(BREWERY+ALL).then(response => {return response.data;});
 }
 
 export function del(event){
