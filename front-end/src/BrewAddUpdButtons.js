@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {add, upd, get} from './BrewFuncs.js';
+import {add, upd, del, get} from './BrewFuncs.js';
 
 export default class BrewAddUpdDelButtons extends Component {
     constructor(props){
@@ -7,31 +7,37 @@ export default class BrewAddUpdDelButtons extends Component {
         this.state = {
           id : 0,
           name : 'DefaultName',
-          logoUrl: 'DefaultLogo',
-          buttonWorks : false};
+          logoUrl: 'DefaultLogo'
+        };
     }
 
     handleClick = () => {
       var data = get(document.getElementById('Upd Id').value);
-      this.setState({id : data.id, name : data.name, logoUrl: data.logoUrl, buttonWorks : true});
+      this.setState({id : data.id, name : data.name, logoUrl: data.logoUrl});
     }
 
     render(){
         return(
             <div id='BrewAddUpdDelButtons'>
                 <form id='Add Form' onSubmit={add}>
-                    <input id='Add Name' type='text' placeholder={this.state.name}/>
-                    <input id='Add Logo' type='text' placeholder={this.state.logoUrl}/>
+                    <input id='Add Name' type='text' placeholder='Name'/>
+                    <input id='Add Logo' type='text' placeholder='Logo Url'/>
                     <input id='Add Submit' type='submit' value='Add'/>
                 </form>
+                <br></br>
                 <form id='Upd Form' onSubmit = {upd}>
-                    <input id = 'Upd Id' type = 'number' placeholder ={this.state.id} />
-                    <input id = 'Upd Name' type = 'text' placeholder={this.state.name}/>
-                    <input id = 'Upd Logo' type = 'text' placeholder={this.state.logoUrl}/>
-                    <input id = 'Upd Submit' type = 'submit' value = 'Update' disabled={this.state.buttonWorks}/>
+                    <input id = 'Upd Id' type = 'number' placeholder ='Id'/>
+                    <input id = 'Upd Name' type = 'text' placeholder='Name'/>
+                    <input id = 'Upd Logo' type = 'text' placeholder='Logo Url'/>
+                    <input id = 'Upd Submit' type = 'submit' value = 'Update'/>
                 </form>
-                <br/>
-                <p id = 'Confirm AddUpd'></p>
+                <br></br>
+                <form id='Del Form' onSubmit = {del}>
+                    <input id = 'Del Id' type = 'number' placeholder ='Id'/>
+                    <input id = 'Del Submit' type = 'submit' value = 'Delete'/>
+                </form>
+                <br></br>
+                <p id = 'Confirm'></p>
             </div>
         );
     }
