@@ -38,6 +38,7 @@ export default class BrewPage extends Component {
     render() {
       return (
             <div id='BrewPage'>
+                <p id='Confirm Del'></p>
                 <BootstrapTable data={this.state.players} options={this.state.options} className='topTable'>
                     <TableHeaderColumn dataField='id' isKey>Player ID</TableHeaderColumn>
                     <TableHeaderColumn dataField='name' dataSort={true}>Name</TableHeaderColumn>

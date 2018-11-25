@@ -15,7 +15,7 @@ class PageSelector extends Component {
         </div>
       );
     } else {
-      return <div> Default </div>;
+      return <div id='defaultSelector'> Default </div>;
     }
   }
 }

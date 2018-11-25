@@ -31,7 +31,7 @@ export default class BrewAddUpdDelButtons extends Component {
                     <input id = 'Upd Submit' type = 'submit' value = 'Update' disabled={this.state.buttonWorks}/>
                 </form>
                 <br/>
-                <p id = 'Confirm Player'></p>
+                <p id = 'Confirm AddUpd'></p>
             </div>
         );
     }
