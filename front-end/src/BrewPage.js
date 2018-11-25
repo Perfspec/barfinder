@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'ReactBootstrapTable2';
-import {All} from './BrewFuncs.js';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table-next';
+
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-const getAll = All();
+const getAll = [{
+  "idBrewery":1,
+  "name":"Harveys",
+  "logoUrl":"https://pbs.twimg.com/profile_images/859330003103862784/zS4k0gJG.jpg"
+},{
+  "idBrewery":2,
+  "name":"BrewDog",
+  "logoUrl":"https://pbs.twimg.com/profile_images/586475073034330112/kNHqVAx6_400x400.jpg"
+}];
 
 const cellEditProp = {
   mode: 'click'
