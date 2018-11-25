@@ -23,4 +23,4 @@ class BrewPage extends Component {
     }
 }
 
-export default BrewPage;
+export {BrewPage};

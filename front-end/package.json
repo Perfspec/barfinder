@@ -1,6 +1,6 @@
 {
   "name": "front-end",
-  "homepage": "http://35.189.69.132:3000/barfinder/",
+  "homepage": "https://35.189.69.132:3000/barfinder/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

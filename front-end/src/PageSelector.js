@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import BrewPage from './BrewPage.js';
-import BrewAddUpdButtons from './BrewAddUpdButtons.js'
-
-
-
+import {BrewPage} from './BrewPage.js';
+import {BrewAddUpdDelButtons} from './BrewAddUpdDelButtons.js'
 
 class PageSelector extends Component {
   render() {
     if(this.props.selector==='Brewery'){
       return (
         <div id='PageSelected==Brewery'>
-        <BrewAddUpdButtons />
+        <BrewAddUpdDelButtons />
         <BrewPage />
         </div>
       );
@@ -20,4 +17,4 @@ class PageSelector extends Component {
   }
 }
 
-export default PageSelector;
+export {PageSelector};

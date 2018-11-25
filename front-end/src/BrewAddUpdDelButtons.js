@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {add, upd, del, get} from './BrewFuncs.js';
 
-export default class BrewAddUpdDelButtons extends Component {
+class BrewAddUpdDelButtons extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -42,3 +42,4 @@ export default class BrewAddUpdDelButtons extends Component {
         );
     }
 }
+export {BrewAddUpdDelButtons};
