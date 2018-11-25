@@ -16,8 +16,7 @@ export function get(id) {
   Axios.get(BREWERY+GET+id).then(response => { return response.data;});
 }
 
-export const all = (event) => {
-  event.preventDefault();
+export const all = () => {
   Axios.get(BREWERY+ALL).then(response => {return response.data;});
 }
 
