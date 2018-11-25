@@ -39,8 +39,8 @@ export default class BrewPage extends Component {
       return (
             <div id='BrewPage'>
                 <p id='Confirm Del'></p>
-                <BootstrapTable data={this.state.players} options={this.state.options} className='topTable'>
-                    <TableHeaderColumn dataField='id' isKey>Player ID</TableHeaderColumn>
+                <BootstrapTable data={this.state.data} options={this.state.options} className='topTable'>
+                    <TableHeaderColumn dataField='id' isKey>Id</TableHeaderColumn>
                     <TableHeaderColumn dataField='name' dataSort={true}>Name</TableHeaderColumn>
                     <TableHeaderColumn dataField='logoUrl' dataSort={true}>Logo</TableHeaderColumn>
                     <TableHeaderColumn dataField='button' dataFormat={this.cellButton}/>
