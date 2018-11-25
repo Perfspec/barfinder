@@ -21,11 +21,7 @@ class BrewPage extends Component {
 
     render() {
       return (
-        <BootstrapTable data={ getAll } cellEdit={ cellEditProp }>
-          <TableHeaderColumn dataField='idBrewery' isKey>id</TableHeaderColumn>
-          <TableHeaderColumn dataField='name'>name</TableHeaderColumn>
-          <TableHeaderColumn dataField='logoUrl'>logoUrl</TableHeaderColumn>
-        </BootstrapTable>
+        <div></div>
             );
     }
 }
