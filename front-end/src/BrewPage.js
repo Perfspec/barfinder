@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table-next';
+import {BootstrapTable, TableHeaderColumn} from 'ReactBootstrapTable2';
 import {All} from './BrewFuncs.js';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
@@ -12,11 +12,13 @@ const cellEditProp = {
 class BrewPage extends Component {
 
     render() {
-      return <BootstrapTable data={ getAll } cellEdit={ cellEditProp }>
+      return (
+        <BootstrapTable data={ getAll } cellEdit={ cellEditProp }>
           <TableHeaderColumn dataField='idBrewery' isKey>id</TableHeaderColumn>
           <TableHeaderColumn dataField='name'>name</TableHeaderColumn>
           <TableHeaderColumn dataField='logoUrl'>logoUrl</TableHeaderColumn>
-      </BootstrapTable>
+        </BootstrapTable>
+            );
     }
 }
 
