@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import {BREWERY, ADD, GET, ALL, UPD, DEL} from './const.js';
 
-export const add = (event) => {
+export const Add = (event) => {
     event.preventDefault();
     Axios.post(BREWERY+ADD, {
       name : document.getElementById('Add Name').value,
@@ -13,15 +13,15 @@ export const add = (event) => {
 }
 
 
-export function get(id) {
-  Axios.get(BREWERY+GET+id).then(response => { return response.data;});
+export function Get(id) {
+  Axios.get(BREWERY+GET+id).then(response => { return response;});
 }
 
-export const all = () => {
-  Axios.get(BREWERY+ALL).then(response => {return response.data;});
+export const All = () => {
+  Axios.get(BREWERY+ALL).then(response => {return response;});
 }
 
-export function del(event){
+export function Del(event){
     event.preventDefault();
     Axios.delete(BREWERY+DEL+document.getElementById('Del Id').value).then(response => {
         document.getElementById('Confirm').innerHTML = response.data.message;
@@ -29,7 +29,7 @@ export function del(event){
     window.location.reload();
 }
 
-export function upd(event){
+export function Upd(event){
     event.preventDefault();
     Axios.put(BREWERY+UPD+document.getElementById('Upd Id').value, {
       name : document.getElementById('Upd Name').value,
