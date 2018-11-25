@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BrewPage from 'BrewPage.js';
-import BrewAddUpdButtons from 'BrewAddUpdButtons.js'
+import BrewPage from './BrewPage.js';
+import BrewAddUpdButtons from './BrewAddUpdButtons.js'
 
 
 
