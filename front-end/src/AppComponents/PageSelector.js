@@ -21,19 +21,19 @@ class PageSelector extends React.Component {
 
   render() {
     if(this.props.selector==='Bar'){
-      return ( <div id='PageSelected==Bar'> {(e) => this.barAll(e)} </div> );
+      return ( <div id={this.props.id}> {(e) => this.barAll(e)} </div> );
     }
     else if(this.props.selector==='Brewery'){
-      return ( <div id='PageSelected==Brewery'>{(e) => this.brewAll(e)}</div> );
+      return ( <div id={this.props.id}>{(e) => this.brewAll(e)}</div> );
     }
     else if(this.props.selector==='Drink'){
-      return ( <div id='PageSelected==Drink'>{(e) => this.drinkAll(e)}</div> );
+      return ( <div id={this.props.id}>{(e) => this.drinkAll(e)}</div> );
     }
     else if(this.props.selector==='Offer'){
-      return ( <div id='PageSelected==Offer'>{(e) => this.offerAll(e)}</div> );
+      return ( <div id={this.props.id}>{(e) => this.offerAll(e)}</div> );
     }
     else {
-      return <div id='defaultSelector'> Default </div>;
+      return <div id={this.props.id}> Default </div>;
     }
   }
 }
