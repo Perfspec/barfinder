@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
@@ -30,7 +30,7 @@ class App extends Component {
         <input type="submit" value="Submit" />
       </form>
       <PageSelector id="PageSelected" selector={this.state.value}/>
-      </React.Fragment>
+      </div>
     );
   }
 }
