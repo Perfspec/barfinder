@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import {BREWERY, ADD, GET, ALL, UPD, DEL} from './const.js';
+import {BREWERY, ADD, GET, ALL, UPD, DEL} from './const';
 
 export const Add = (event) => {
     event.preventDefault();

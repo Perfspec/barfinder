@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {PageSelector} from './AppComponents/PageSelector.js';
-
-
+import {PageSelector} from './AppComponents/PageSelector';
 
 class App extends Component {
   constructor(){

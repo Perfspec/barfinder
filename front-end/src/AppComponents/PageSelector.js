@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import {BAR, BREWERY, DRINK, OFFER, ALL} from './const.js';
+import {BAR, BREWERY, DRINK, OFFER, ALL} from './const';
 
 class PageSelector extends Component {
   barAll = () => {

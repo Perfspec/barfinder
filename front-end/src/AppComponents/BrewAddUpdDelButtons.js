@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Add, Upd, Del, Get} from './BrewFuncs.js';
+import {Add, Upd, Del, Get} from './BrewFuncs';
 
 class BrewAddUpdDelButtons extends Component {
     constructor(props){
