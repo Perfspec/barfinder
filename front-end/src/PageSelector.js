@@ -12,10 +12,7 @@ class PageSelector extends Component {
   render() {
     if(this.props.selector==='Brewery'){
       return (
-        <div id='PageSelected==Brewery'>
-        <BrewAddUpdDelButtons />
-        <BrewPage data={this.brewAll}/>
-        </div>
+        <div id='PageSelected==Brewery'>{(e) => this.brewAll()}</div>
       );
     } else {
       return <div id='defaultSelector'> Default </div>;
