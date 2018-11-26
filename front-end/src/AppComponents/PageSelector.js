@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Axios from 'axios';
-import {BAR, BREWERY, DRINK, OFFER, ALL} from './const';
+import {BAR, BREWERY, DRINK, OFFER, ALL} from '../const';
 
-class PageSelector extends Component {
+class PageSelector extends React.Component {
   barAll = () => {
     Axios.get(BAR+ALL).then(response => {return response;});
   }
