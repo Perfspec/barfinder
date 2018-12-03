@@ -45,32 +45,47 @@ class BrewPage extends Component {
   }
 
   update(iD, newName, newLogo) {
-    if (iD != null && newLogo != null && newName != null) {
-      axios.put(BREWERY + UPD + iD,
+    if(iD != null && newLogo != null && newName != null) {
+      axios.put(BREWERY + UPD + iD.toString(),
         {
-        name: newName.value,
-        logoUrl: newLogo.value
+        name: newName,
+        logoUrl: newLogo
         }
     ).then(response => {
         this.setState({message: response.message});
       });
+    } else if(iD != null && newName != null) {
+      axios.put(BREWERY + UPD + iD.toString(),
+        {
+        name: newName,
+        logoUrl: this.state.brews[iD].logoUrl
+        }
+    ).then(response => {
+        this.setState({message: response.message});
+      });
+    } else if(iD != null && newLogo != null) {
+      axios.put(BREWERY + UPD + iD.toString(),
+        {
+        name: this.state.brews[iD].name,
+        logoUrl: newLogo
+        }
+      ).then(response => {
+        this.setState({message: response.message});
+      });
     } else {
-      this.setState({message: "there were null values in the Update call"});
+      this.setState({message: "there was an unsuitable iD value in the Update call"});
     }
   }
 
   render() {
     const {brews} = this.state;
-    const idInputElement = <input id="TheId" type="text" placeholder="id"/>;
-    const nameInputElement = <input id="New Name" type="text" placeholder="name"/>;
-    const logoInputElement = <input id="New Logo" type="text" placeholder="logo"/>;
 
     function handleCreate() {
-      this.create(nameInputElement, logoInputElement);
+      this.create(document.getElementById("New Name").value, document.getElementById("New Logo").value);
     }
 
     function handleUpdate(id) {
-      this.update(id, nameInputElement, logoInputElement);
+      this.update(id, document.getElementById("New Name").value, document.getElementById("New Logo").value);
     }
 
     function handleDelete(id) {
@@ -94,13 +109,15 @@ class BrewPage extends Component {
       <form>
         <button onClick={() => handleCreate()}>
           Create</button>
-        <button onClick={() => handleUpdate(idInputElement.value)}>
+        <button onClick={() => handleUpdate(document.getElementById("TheId").value)}>
           Update</button>
-        <button onClick={() => handleDelete(idInputElement.value)}>
+        <button onClick={() => handleDelete(document.getElementById("TheId").value)}>
           Delete</button>
-        {idInputElement}
-        {nameInputElement}
-        {logoInputElement}
+        <button onClick={() => console.log(document.getElementById("TheId").value)}>
+        Checker</button>
+        <input id="TheId" type="text" placeholder="id"/>
+        <input id="New Name" type="text" placeholder="name"/>
+        <input id="New Logo" type="text" placeholder="logo"/>
       </form>
       <div>{this.state.message}</div>
       {brewList}
