@@ -111,12 +111,18 @@ class BarPage extends Component {
     const barsList = bars.length
       ? (bars.map(bar => {
         return (<div className="post-card" key={bar.idBar}>
-          <BarCard bar={bar} width="200" height="200"/>
+          <BarCard bar={bar}/>
           <form>
             <button onClick={() => this.update(
                 bar.idBrewery,
-                document.getElementById("New Name").value,
-                document.getElementById("New Logo").value
+                document.getElementById("New name").value,
+                document.getElementById("New address").value,
+                document.getElementById("New postcode").value,
+                document.getElementById("New easting").value,
+                document.getElementById("New northing").value,
+                document.getElementById("New latitude").value,
+                document.getElementById("New longitude").value,
+                document.getElementById("New local_authority").value
               )}>Update {bar.idBar}</button>
             <button onClick={() => this.del3te(bar.idBar)}>
             Delete {bar.idBar}</button>
@@ -160,14 +166,11 @@ class BarPage extends Component {
         <input id="New address" type="text" placeholder="address"/>
         <input id="New postcode" type="text" placeholder="name"/>
         <input id="New easting" type="number" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New name" type="text" placeholder="name"/>
+        <input id="New northing" type="number" placeholder="name"/>
+        <input id="New longitude" type="number" placeholder="name"/>
+        <input id="New latitude" type="number" placeholder="name"/>
+        <input id="New local_authority" type="text" placeholder="name"/>
       </form>
-      <div>{this.state.message}</div>
       {barsList}
     </React.Fragment>
   );
