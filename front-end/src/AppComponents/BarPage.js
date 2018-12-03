@@ -167,8 +167,8 @@ class BarPage extends Component {
         <input id="New postcode" type="text" placeholder="name"/>
         <input id="New easting" type="number" placeholder="name"/>
         <input id="New northing" type="number" placeholder="name"/>
-        <input id="New longitude" type="number" placeholder="name"/>
-        <input id="New latitude" type="number" placeholder="name"/>
+        <input id="New longitude" type="decimal" placeholder="name"/>
+        <input id="New latitude" type="decimal" placeholder="name"/>
         <input id="New local_authority" type="text" placeholder="name"/>
       </form>
       {barsList}
