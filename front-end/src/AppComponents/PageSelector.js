@@ -1,41 +1,33 @@
-import React from 'react';
-import Axios from 'axios';
-import {BAR, BREWERY, DRINK, OFFER, ALL} from '../const';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import BrewPage from './BrewPage';
 
-class PageSelector extends React.Component {
-  barAll = () => {
-    Axios.get(BAR+ALL).then(response => {return response;});
-  }
+const Index = () => <h2>Home</h2>;
+const Breweries = () => <div id='BrewPage'><BrewPage/></div>;
+const Users = () => <h2>Users</h2>;
 
-  brewAll = () => {
-    Axios.get(BREWERY+ALL).then(response => {return response;});
-  }
+const PageSelector = () => (
+  <Router>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/breweries/">Breweries</Link>
+          </li>
+          <li>
+            <Link to="/users/">Users</Link>
+          </li>
+        </ul>
+      </nav>
 
-  drinkAll = () => {
-    Axios.get(DRINK+ALL).then(response => {return response;});
-  }
+      <Route path="/" exact component={Index} />
+      <Route path="/breweries/" component={Breweries} />
+      <Route path="/users/" component={Users} />
+    </div>
+  </Router>
+);
 
-  offerAll = () => {
-    Axios.get(OFFER+ALL).then(response => {return response;});
-  }
-
-  render() {
-    if(this.props.selector==='Bar'){
-      return ( <div id={this.props.id}> {(e) => this.barAll(e)} </div> );
-    }
-    else if(this.props.selector==='Brewery'){
-      return ( <div id={this.props.id}>{(e) => this.brewAll(e)}</div> );
-    }
-    else if(this.props.selector==='Drink'){
-      return ( <div id={this.props.id}>{(e) => this.drinkAll(e)}</div> );
-    }
-    else if(this.props.selector==='Offer'){
-      return ( <div id={this.props.id}>{(e) => this.offerAll(e)}</div> );
-    }
-    else {
-      return <div id={this.props.id}> Default </div>;
-    }
-  }
-}
-
-export {PageSelector};
+export default PageSelector;
