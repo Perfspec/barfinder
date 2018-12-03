@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {BAR, ADD, ALL, DEL, UPD} from '../const';
+import {BAR, ADD, ALL, GET, DEL, UPD} from '../const';
 import BarCard from './BarCard';
 
 class BarPage extends Component {
@@ -8,15 +8,23 @@ class BarPage extends Component {
     super(props);
     this.state = {
       bars: [],
-      message: 'whats the message'
+      message: 'whats the message',
+      getter: 'getById'
     }
     this.create = this.create.bind(this);
     this.update = this.update.bind(this);
     this.del3te = this.del3te.bind(this);
+    this.getByLocation = this.getByLocation.bind(this);
   }
 
   componentDidMount() {
     axios.get(BAR + ALL).then(res => {
+      this.setState({bars: res.data});
+    })
+  }
+
+  getByLocation(lat, long) {
+    axios.get(BAR + GET +'longitude='+long+'/latitude='+lat+'/listLength=3').then(res => {
       this.setState({bars: res.data});
     })
   }
@@ -89,7 +97,7 @@ class BarPage extends Component {
   newLongitude, newLocalAuthority) {
     const allNotNull=
     newName != null &&
-    newAddress != null &&
+    newAddress !== null &&
     newPostcode != null &&
     newEasting != null &&
     newNorthing != null &&
@@ -133,6 +141,10 @@ class BarPage extends Component {
 
     return (
     <React.Fragment>
+    <button onClick={() => this.getByLocation(
+      document.getElementById("New latitude").value,
+      document.getElementById("New longitude").value)}>
+      Find Closest Bars</button>
       <form>
         <button onClick={() => this.create(
           document.getElementById("New name").value,
@@ -164,12 +176,12 @@ class BarPage extends Component {
         <input id="The id" type="text" placeholder="id"/>
         <input id="New name" type="text" placeholder="name"/>
         <input id="New address" type="text" placeholder="address"/>
-        <input id="New postcode" type="text" placeholder="name"/>
-        <input id="New easting" type="number" placeholder="name"/>
-        <input id="New northing" type="number" placeholder="name"/>
-        <input id="New longitude" type="decimal" placeholder="name"/>
-        <input id="New latitude" type="decimal" placeholder="name"/>
-        <input id="New local_authority" type="text" placeholder="name"/>
+        <input id="New postcode" type="text" placeholder="postcode"/>
+        <input id="New easting" type="number" placeholder="easting"/>
+        <input id="New northing" type="number" placeholder="northing"/>
+        <input id="New longitude" type="decimal" placeholder="longitude"/>
+        <input id="New latitude" type="decimal" placeholder="latitude"/>
+        <input id="New local_authority" type="text" placeholder="local_authority"/>
       </form>
       {barsList}
     </React.Fragment>
