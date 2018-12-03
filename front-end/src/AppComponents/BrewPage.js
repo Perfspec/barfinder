@@ -24,7 +24,7 @@ class BrewPage extends Component {
   del3te(id) {
     if (id != null) {
       axios.delete(BREWERY + DEL + id).then((response) => {
-        this.setState({message: response.message});
+        this.setState({message: response.data.message});
       });
     } else {
       window.alert("the id was null when delete was called");
@@ -37,68 +37,55 @@ class BrewPage extends Component {
         name: newName,
         logoUrl: newLogo
       }).then(response => {
-        this.setState({message: response.message});
+        this.setState({message: response.data.message});
       });
     } else {
-      this.setState({message: "there were null values in the Create call"});
+      this.setState({message:
+        "there were null values in the Create call"});
     }
+  }
+
+  upd(iD, newName, newLogo){
+    axios.put(BREWERY + UPD + iD,
+      {
+      idBrewery: iD,
+      name: newName,
+      logoUrl: newLogo
+      }
+  ).then(response => {
+      this.setState({message: response.data.message});
+    });
   }
 
   update(iD, newName, newLogo) {
     if(iD != null && newLogo != null && newName != null) {
-      axios.put(BREWERY + UPD + iD.toString(),
-        {
-        name: newName,
-        logoUrl: newLogo
-        }
-    ).then(response => {
-        this.setState({message: response.message});
-      });
+      this.upd(iD, newName, newLogo);
     } else if(iD != null && newName != null) {
-      axios.put(BREWERY + UPD + iD.toString(),
-        {
-        name: newName,
-        logoUrl: this.state.brews[iD].logoUrl
-        }
-    ).then(response => {
-        this.setState({message: response.message});
-      });
+      this.upd(iD, newName, this.state.brews[iD].logoUrl);
     } else if(iD != null && newLogo != null) {
-      axios.put(BREWERY + UPD + iD.toString(),
-        {
-        name: this.state.brews[iD].name,
-        logoUrl: newLogo
-        }
-      ).then(response => {
-        this.setState({message: response.message});
-      });
+      this.upd(iD, this.state.brews[iD].name, newLogo);
     } else {
-      this.setState({message: "there was an unsuitable iD value in the Update call"});
+      this.setState({message:
+        "there was an unsuitable iD value in the Update Brewery call"});
     }
   }
 
   render() {
     const {brews} = this.state;
 
-    function handleCreate() {
-      this.create(document.getElementById("New Name").value, document.getElementById("New Logo").value);
-    }
-
-    function handleUpdate(id) {
-      this.update(id, document.getElementById("New Name").value, document.getElementById("New Logo").value);
-    }
-
-    function handleDelete(id) {
-      this.del3te(id);
-    }
-
     const brewList = brews.length
       ? (brews.map(brew => {
         return (<div className="post-card" key={brew.idBrewery}>
           <BrewCard brew={brew} width="200" height="200"/>
           <form>
-            <button onClick={() => handleUpdate(brew.idBrewery)}>Update {brew.idBrewery}</button>
-            <button onClick={() => handleDelete(brew.idBrewery)}>Delete {brew.idBrewery}</button>
+            <button onClick={() => this.update(
+                brew.idBrewery,
+                document.getElementById("New Name").value,
+                document.getElementById("New Logo").value
+              )}>Update {brew.idBrewery}</button>
+            <button onClick={() =>
+                this.del3te(brew.idBrewery)}>
+                Delete {brew.idBrewery}</button>
           </form>
         </div>);
       }))
@@ -106,14 +93,26 @@ class BrewPage extends Component {
 
     return (
     <React.Fragment>
+      {this.state.whole}
       <form>
-        <button onClick={() => handleCreate()}>
+        <button onClick={() => this.create(
+            document.getElementById("New Name").value,
+            document.getElementById("New Logo").value
+          )}>
           Create</button>
-        <button onClick={() => handleUpdate(document.getElementById("TheId").value)}>
+        <button onClick={() => this.update(
+            document.getElementById("TheId").value,
+            document.getElementById("New Name").value,
+            document.getElementById("New Logo").value
+            )}>
           Update</button>
-        <button onClick={() => handleDelete(document.getElementById("TheId").value)}>
+        <button onClick={() => this.del3te(
+            document.getElementById("TheId").value
+          )}>
           Delete</button>
-        <button onClick={() => console.log(document.getElementById("TheId").value)}>
+        <button onClick={() => console.log(
+            document.getElementById("TheId").value
+          )}>
         Checker</button>
         <input id="TheId" type="text" placeholder="id"/>
         <input id="New Name" type="text" placeholder="name"/>

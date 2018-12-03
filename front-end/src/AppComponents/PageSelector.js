@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import BrewPage from './BrewPage';
+import BarPage from './BarPage';
 
 const Index = () => <h2>Home</h2>;
 const Breweries = () => <div id='BrewPage'><BrewPage/></div>;
-const Users = () => <h2>Users</h2>;
+const Bars = () => <div id='BarPage'><BarPage/></div>;
 
 const PageSelector = () => (
   <Router>
@@ -18,14 +19,14 @@ const PageSelector = () => (
             <Link to="/breweries/">Breweries</Link>
           </li>
           <li>
-            <Link to="/users/">Users</Link>
+            <Link to="/bars/">Bars</Link>
           </li>
         </ul>
       </nav>
 
       <Route path="/" exact component={Index} />
       <Route path="/breweries/" component={Breweries} />
-      <Route path="/users/" component={Users} />
+      <Route path="/bars/" component={Bars} />
     </div>
   </Router>
 );
