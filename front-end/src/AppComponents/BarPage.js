@@ -18,13 +18,17 @@ class BarPage extends Component {
   }
 
   componentDidMount() {
+    this.getAll()
+  }
+
+  getAll() {
     axios.get(BAR + ALL).then(res => {
       this.setState({bars: res.data});
     })
   }
 
-  getByLocation(lat, long) {
-    axios.get(BAR + GET +'longitude='+long+'/latitude='+lat+'/listLength=3').then(res => {
+  getByLocation(lat, long, listLength) {
+    axios.get(BAR + GET +'longitude='+long+'/latitude='+lat+'/listLength='+listLength).then(res => {
       this.setState({bars: res.data});
     })
   }
@@ -141,12 +145,30 @@ class BarPage extends Component {
 
     return (
     <React.Fragment>
+    <button onClick={() => this.getAll()}>Get All Bars</button>
     <button onClick={() => this.getByLocation(
-      document.getElementById("New latitude").value,
-      document.getElementById("New longitude").value)}>
+      document.getElementById("Your latitude").value,
+      document.getElementById("Your longitude").value,
+      document.getElementById("Your listLength").value)}>
       Find Closest Bars</button>
-      <form>
-        <button onClick={() => this.create(
+    <input id="Your latitude" type="decimal" placeholder="latitude"/>
+    <input id="Your longitude" type="decimal" placeholder="longitude"/>
+    <input id="Your listLength" type="number" placeholder="page size"/>
+    <br></br>
+    <form>
+      <button onClick={() => this.create(
+        document.getElementById("New name").value,
+        document.getElementById("New address").value,
+        document.getElementById("New postcode").value,
+        document.getElementById("New easting").value,
+        document.getElementById("New northing").value,
+        document.getElementById("New latitude").value,
+        document.getElementById("New longitude").value,
+        document.getElementById("New local_authority").value
+        )}>
+        Create</button>
+      <button onClick={() => this.update(
+          document.getElementById("The id").value,
           document.getElementById("New name").value,
           document.getElementById("New address").value,
           document.getElementById("New postcode").value,
@@ -156,34 +178,23 @@ class BarPage extends Component {
           document.getElementById("New longitude").value,
           document.getElementById("New local_authority").value
           )}>
-          Create</button>
-        <button onClick={() => this.update(
-            document.getElementById("The id").value,
-            document.getElementById("New name").value,
-            document.getElementById("New address").value,
-            document.getElementById("New postcode").value,
-            document.getElementById("New easting").value,
-            document.getElementById("New northing").value,
-            document.getElementById("New latitude").value,
-            document.getElementById("New longitude").value,
-            document.getElementById("New local_authority").value
-            )}>
-          Update</button>
-        <button onClick={() => this.del3te(
-            document.getElementById("TheId").value
-          )}>
-          Delete</button>
-        <input id="The id" type="text" placeholder="id"/>
-        <input id="New name" type="text" placeholder="name"/>
-        <input id="New address" type="text" placeholder="address"/>
-        <input id="New postcode" type="text" placeholder="postcode"/>
-        <input id="New easting" type="number" placeholder="easting"/>
-        <input id="New northing" type="number" placeholder="northing"/>
-        <input id="New longitude" type="decimal" placeholder="longitude"/>
-        <input id="New latitude" type="decimal" placeholder="latitude"/>
-        <input id="New local_authority" type="text" placeholder="local_authority"/>
-      </form>
-      {barsList}
+        Update</button>
+      <button onClick={() => this.del3te(
+          document.getElementById("TheId").value
+        )}>
+        Delete</button>
+      <input id="The id" type="text" placeholder="id"/>
+      <input id="New name" type="text" placeholder="name"/>
+      <input id="New address" type="text" placeholder="address"/>
+      <input id="New postcode" type="text" placeholder="postcode"/>
+      <input id="New easting" type="number" placeholder="easting"/>
+      <input id="New northing" type="number" placeholder="northing"/>
+      <input id="New latitude" type="decimal" placeholder="latitude"/>
+      <input id="New longitude" type="decimal" placeholder="longitude"/>
+      <input id="New local_authority" type="text" placeholder="local_authority"/>
+    </form>
+    <br></br>
+    {barsList}
     </React.Fragment>
   );
   }

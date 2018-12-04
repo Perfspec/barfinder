@@ -93,7 +93,6 @@ class BrewPage extends Component {
 
     return (
     <React.Fragment>
-      {this.state.whole}
       <form>
         <button onClick={() => this.create(
             document.getElementById("New Name").value,
@@ -110,15 +109,10 @@ class BrewPage extends Component {
             document.getElementById("TheId").value
           )}>
           Delete</button>
-        <button onClick={() => console.log(
-            document.getElementById("TheId").value
-          )}>
-        Checker</button>
         <input id="TheId" type="text" placeholder="id"/>
         <input id="New Name" type="text" placeholder="name"/>
         <input id="New Logo" type="text" placeholder="logo"/>
       </form>
-      <div>{this.state.message}</div>
       {brewList}
     </React.Fragment>
   );
