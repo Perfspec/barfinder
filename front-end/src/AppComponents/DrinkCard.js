@@ -7,13 +7,13 @@ class DrinkCard extends React.Component {
     return(
         <div className="card">
           <span className="card-title">{this.props.drink.name}</span>
-          <img className="brew-logo"
+          <img
             src={this.props.drink.logoUrl}
             width={this.props.width}
             height={this.props.height}
-            alt={"Link broken for idDrink="+this.props.drink.id}/>
+            alt={"Link broken for idDrink="+this.props.drink.idDrink}/>
           {this.props.brew.name}
-          <img className="brew-logo"
+          <img
             src={this.props.brew.logoUrl}
             width={this.props.width/2}
             height={this.props.height/2}

@@ -13,6 +13,7 @@ class DrinkPage extends Component {
     this.create = this.create.bind(this);
     this.update = this.update.bind(this);
     this.del3te = this.del3te.bind(this);
+    this.getAll = this.getAll.bind(this);
   }
 
   componentDidMount() {
@@ -62,17 +63,14 @@ class DrinkPage extends Component {
   }
 
   update(iD, newName, newLogo, newBreweryId, newABV) {
-    const allNotNull=iD != null &&
+    const allNotNull=
+    (iD != null &&
     newName != null &&
     newLogo != null &&
     newBreweryId != null &&
-    newABV != null;
+    newABV != null);
     if(allNotNull) {
       this.upd(iD, newName, newLogo, newBreweryId, newABV);
-    } else if(iD != null && newName != null && newABV != null) {
-      this.upd(iD, newName, this.state.drinks[iD].logoUrl, this.state.drinks[iD].idBrewery, newABV);
-    } else {
-
     }
   }
 
