@@ -7,8 +7,7 @@ class BrewPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      brews: [],
-      message: 'whats the message'
+      brews: []
     }
     this.create = this.create.bind(this);
     this.update = this.update.bind(this);
@@ -23,11 +22,7 @@ class BrewPage extends Component {
 
   del3te(id) {
     if (id != null) {
-      axios.delete(BREWERY + DEL + id).then((response) => {
-        this.setState({message: response.data.message});
-      });
-    } else {
-      window.alert("the id was null when delete was called");
+      axios.delete(BREWERY + DEL + id);
     }
   }
 
@@ -36,12 +31,7 @@ class BrewPage extends Component {
       axios.post(BREWERY + ADD, {
         name: newName,
         logoUrl: newLogo
-      }).then(response => {
-        this.setState({message: response.data.message});
       });
-    } else {
-      this.setState({message:
-        "there were null values in the Create call"});
     }
   }
 
@@ -51,22 +41,17 @@ class BrewPage extends Component {
       idBrewery: iD,
       name: newName,
       logoUrl: newLogo
-      }
-  ).then(response => {
-      this.setState({message: response.data.message});
-    });
+      });
   }
 
   update(iD, newName, newLogo) {
     if(iD != null && newLogo != null && newName != null) {
       this.upd(iD, newName, newLogo);
-    } else if(iD != null && newName != null) {
-      this.upd(iD, newName, this.state.brews[iD].logoUrl);
-    } else if(iD != null && newLogo != null) {
-      this.upd(iD, this.state.brews[iD].name, newLogo);
-    } else {
-      this.setState({message:
-        "there was an unsuitable iD value in the Update Brewery call"});
+    } else if(iD != null && newName != null && newLogo == null) {
+      this.upd(iD, newName, this.state.brews[parseInt(iD)].logoUrl);
+    } else if(iD != null && newName == null && newLogo != null) {
+      this.upd(iD, this.state.brews[parseInt(iD)].name, newLogo);
+      console.log(parseInt(iD));
     }
   }
 

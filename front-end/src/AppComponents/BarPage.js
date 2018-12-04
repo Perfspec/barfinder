@@ -7,9 +7,7 @@ class BarPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bars: [],
-      message: 'whats the message',
-      getter: 'getById'
+      bars: []
     }
     this.create = this.create.bind(this);
     this.update = this.update.bind(this);
@@ -28,8 +26,8 @@ class BarPage extends Component {
   }
 
   getByLocation(lat, long, listLength) {
-    axios.get(BAR + GET +'longitude='+long+'/latitude='+lat+'/listLength='+listLength).then(res => {
-      this.setState({bars: res.data});
+    axios.get(BAR + GET +'longitude='+long+'/latitude='+lat+'/listLength='+listLength)
+    .then(res => {this.setState({bars: res.data});
     })
   }
 
@@ -38,8 +36,6 @@ class BarPage extends Component {
       axios.delete(BAR + DEL + id).then((response) => {
         this.setState({message: response.message});
       });
-    } else {
-      console.log("the id was null when delete was called");
     }
   }
 
@@ -66,13 +62,7 @@ class BarPage extends Component {
       latitude: newLatitude,
       longitude: newLongitude,
       local_authority: newLocalAuthority
-      }
-      ).then(response => {
-        this.setState({message: response.data.message});
-      });
-    } else {
-      this.setState({message:
-        "there was a value set to in the Create Bar call"});
+    });
     }
   }
 
@@ -90,10 +80,7 @@ class BarPage extends Component {
       latitude: newLatitude,
       longitude: newLongitude,
       local_authority: newLocalAuthority
-      }
-  ).then(response => {
-      this.setState({message: response.data.message});
-    });
+      });
   }
 
   update(iD, newName, newAddress,newPostcode,
@@ -112,8 +99,6 @@ class BarPage extends Component {
       this.upd(iD, newName, newAddress,newPostcode,
       newEasting, newNorthing, newLatitude,
       newLongitude, newLocalAuthority);
-    } else {
-      this.setState({message: "there was a value set to null in the Update Bar call"});
     }
   }
 
